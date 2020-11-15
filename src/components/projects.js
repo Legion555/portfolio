@@ -22,14 +22,15 @@ const Projects = () => {
 
     return (
         <div className="projects" id="projects">
-            <h1 className="heading">Projects</h1>
-            <div className="heading-line"></div>
+            <div className="heading">
+                <h1>Projects</h1>
+                <div className="line"></div>
+            </div>
             <div className="project-cards-container">
                 {projects.map(item => 
                     <Project name={item.name} />
                 )}
             </div>
-            
         </div>
     )
 }

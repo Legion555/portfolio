@@ -14,7 +14,8 @@ const About = () => {
                 <h1>About</h1>
                 <div className="line"></div>
             </div>
-            <div className="resume">
+            <div className="description">
+                <p>I am a <span>Front-end Developer</span>.<br/>I believe that technology is the key to unlocking our true potential.<br/><br/></p>
                 <a><FaFileAlt /> My Resume</a>
             </div>
             <div className="tech-stack">
@@ -29,7 +30,6 @@ const About = () => {
                     <span class="item"><FaGitAlt /></span>
                     <span class="item"><FaGithub /></span>
                 </div>
-                
             </div>
         </div>
     )
