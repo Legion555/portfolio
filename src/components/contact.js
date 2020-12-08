@@ -1,6 +1,5 @@
 import React, { useState} from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiOutlineMail, AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 
 
 const Contact = () => {
@@ -18,6 +17,10 @@ const Contact = () => {
                 <a href="https://github.com/Legion555" target="_blank"><div className="item">
                     <AiFillGithub />
                     <p>Github</p>
+                </div></a>
+                <a href="https://www.linkedin.com/in/joshualausberg/" target="_blank"><div className="item">
+                    <AiFillLinkedin />
+                    <p>LinkedIn</p>
                 </div></a>
             </div>
         </div>

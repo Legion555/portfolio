@@ -40,7 +40,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 2px solid white;
 }
 
 .navbar .links a {
@@ -58,7 +57,7 @@ a {
 }
 
 .navbar .links a:hover {
-  color: #eac440;
+  color: #EAC440;
   cursor: pointer;
 }
 
@@ -94,7 +93,7 @@ a {
 
 .hero .header h1 {
   font-size: 64px;
-  color: #eac440;
+  color: #EAC440;
 }
 
 @media all and (max-width: 480px) {
@@ -149,26 +148,28 @@ a {
 
 .hero .links a:hover {
   color: #00000a;
-  background: #eac440;
+  background: #EAC440;
   cursor: pointer;
 }
 
 .hero .links :nth-child(1) {
-  border-left: 2px solid #eac440;
+  border-left: 2px solid #EAC440;
 }
 
 .hero .links :nth-child(2) {
-  border: 2px solid #eac440;
+  border: 2px solid #EAC440;
 }
 
 .hero .links :nth-child(3) {
-  border-right: 2px solid #eac440;
+  border-right: 2px solid #EAC440;
 }
 
 .about {
   width: 100%;
-  background: white;
-  padding: 50px 0 100px 0;
+  background: #EAC440;
+  padding: 50px 0 50px 0;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 .about .heading {
@@ -182,7 +183,6 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
 }
 
 .about .heading h1 {
@@ -201,10 +201,8 @@ a {
 
 .about .description {
   max-width: 720px;
-  margin: 50px auto;
-  padding: 25px;
-  background: #00000a;
-  border-radius: 25px;
+  margin: auto;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -215,21 +213,32 @@ a {
 }
 
 .about .description p {
-  color: white;
+  color: #00000a;
   font-size: 24px;
 }
 
 .about .description a {
-  padding: 5px;
-  border: 2px solid white;
-  color: white;
+  padding: 10px;
+  font-size: 24px;
+  background: #00000a;
+  color: #EAC440;
+  -webkit-transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+  transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+}
+
+.about .description a:hover {
+  border: 2px solid #00000a;
+  background: #EAC440;
+  color: #00000a;
 }
 
 .about .tech-stack {
-  padding: 10px;
-  background: #eac440;
-  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  max-width: 480px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 15px;
+  border-radius: 25px;
+  background: #000024;
 }
 
 .about .tech-stack .heading {
@@ -240,8 +249,8 @@ a {
   padding-left: 5px;
   text-align: center;
   font-size: 32px;
-  color: #00000a;
-  border-left: 3px solid #00000a;
+  color: white;
+  border-left: 3px solid white;
 }
 
 .about .tech-stack .items {
@@ -252,18 +261,14 @@ a {
   font-size: 48px;
   color: #00000a;
   margin: 0 5px;
-  -webkit-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.about .tech-stack .items .item:hover {
-  color: white;
+  -webkit-transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+  transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
 }
 
 .projects {
   width: 100%;
-  background: #00000a;
-  padding: 50px 0 150px 0;
+  background: white;
+  padding: 50px 0 0 0;
   position: relative;
 }
 
@@ -285,85 +290,126 @@ a {
   text-align: center;
   margin-bottom: 10px;
   font-size: 64px;
-  color: white;
+  color: #00000a;
 }
 
 .projects .heading .line {
   width: 100px;
   height: 5px;
   text-align: center;
-  background: white;
+  background: #00000a;
 }
 
-.projects .project-cards-container {
+.projects .project-cards-container .project-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 75px 15px;
+  position: relative;
+  display: flex;
+  background: white;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.projects .project-cards-container .project-card .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.projects .project-cards-container .project-card {
-  width: 250px;
-  height: 250px;
-  position: relative;
+.projects .project-cards-container .project-card .details .image-one {
+  margin-right: 50px;
+}
+
+.projects .project-cards-container .project-card .details .image-two {
+  margin-left: 50px;
+}
+
+.projects .project-cards-container .project-card .details .image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid white;
-  margin: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.projects .project-cards-container .project-card .title {
-  width: 100%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  text-align: center;
-  font-size: 24px;
-  background: white;
+.projects .project-cards-container .project-card .details .image img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #00000a;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media all and (max-width: 480px) {
+  .projects .project-cards-container .project-card .details .image img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .projects .project-cards-container .project-card .details .image {
+    margin: 0px;
+  }
+}
+
+.projects .project-cards-container .project-card .details .text {
+  width: 400px;
+}
+
+@media all and (max-width: 768px) {
+  .projects .project-cards-container .project-card .details .text {
+    width: 300px;
+  }
+}
+
+.projects .project-cards-container .project-card .details .text h1 {
+  font-size: 28px;
   color: #00000a;
-  line-height: 32px;
+  margin-bottom: 25px;
 }
 
-.projects .project-cards-container .project-card .overlay {
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 32px);
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.25);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  opacity: 0;
-  -webkit-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+.projects .project-cards-container .project-card .details .text .icon {
+  font-size: 24px;
 }
 
-.projects .project-cards-container .project-card .overlay a {
-  width: 50%;
-  background: #eac440;
+.projects .project-cards-container .project-card .details .text .stack {
+  color: #554409;
+}
+
+.projects .project-cards-container .project-card .details .text p {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.projects .project-cards-container .project-card .details .text button {
+  margin-right: 15px;
+  background: #EAC440;
   padding: 5px;
-  text-align: center;
-  font-size: 16px;
+  border: none;
+  color: #00000a;
+  font-size: 18px;
 }
 
-.projects .project-cards-container .project-card .overlay a:hover {
-  cursor: pointer;
-  -webkit-transition: 0.25s linear;
-  transition: 0.25s linear;
-  background: black;
-  color: white;
+.projects .project-cards-container .project-card .details .text button:hover {
+  background: #00000a;
+  color: #EAC440;
 }
 
-.projects .project-cards-container .project-card:hover > .overlay {
-  opacity: 1;
+.projects .project-cards-container .line {
+  width: 100%;
+  height: 2px;
+  background: #EAC440;
 }
 
 .contact {
@@ -416,7 +462,7 @@ a {
 }
 
 .contact .links .item:hover svg {
-  color: #eac440;
+  color: #EAC440;
   background: #00000a;
 }
 
@@ -426,7 +472,7 @@ a {
   padding: 40px;
   text-align: center;
   line-height: 75px;
-  background: #eac440;
+  background: #EAC440;
   border-radius: 100%;
   -webkit-transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -439,7 +485,7 @@ a {
 
 .footer {
   width: 100%;
-  background: #eac440;
+  background: #EAC440;
   padding: 50px 0 100px 0;
 }
 

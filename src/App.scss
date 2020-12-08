@@ -10,8 +10,8 @@ $secondary-font: 'Open Sans', sans-serif;
 $color-light: rgb(255, 255, 255);
 $color-medium: #ded765;
 $color-dark: rgb(0,0,10);
-$color-accent-primary:	#eac440;
-$color-accent-secondary: #a7bc17;
+$color-accent-primary:	#EAC440;
+$color-accent-secondary: #EA4066;
 //Box Shadow
 $shadow-main: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -50,7 +50,6 @@ a {
   .links {
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid $color-light;
     a {
       transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
       font-size: 32px;
@@ -130,8 +129,83 @@ a {
 //ABOUT
 .about {
   width: 100%;
+  background: $color-accent-primary;
+  padding: 50px 0 50px 0;
+  box-shadow: $shadow-main;
+  .heading {
+    display: flex; flex-direction: column; align-items: center;
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 64px;
+      color: $color-dark;
+    }
+    .line {
+      width: 100px; height: 5px;
+      text-align: center;
+      background: $color-dark;
+    }
+  }
+  .description {
+    max-width: 720px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    @media all and (max-width: $tablet) {
+      max-width: 400px;
+    }
+    p {
+      color: $color-dark;
+      font-size: 24px;
+    }
+    a {
+      padding: 10px;
+      font-size: 24px;
+      background: $color-dark;
+      color: $color-accent-primary;
+      transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+      &:hover {
+        border: 2px solid $color-dark;
+        background: $color-accent-primary;
+        color: $color-dark;
+      }
+    }
+  }
+  .tech-stack {
+    max-width: 480px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 25px;
+    background: lighten($color: $color-dark, $amount: 5);
+    .heading {
+      margin-bottom: 25px;
+      h3 {
+        padding-left: 5px;
+        text-align: center;
+        font-size: 32px;
+        color: $color-light;
+        border-left: 3px solid $color-light;
+      }
+    }
+    .items {
+      text-align: center;
+      .item {
+        font-size: 48px;
+        color: $color-dark;
+        margin: 0 5px;
+        transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+      }
+    }
+  }
+}
+
+//PROJECTS
+.projects {
+  width: 100%;
   background: $color-light;
-  padding: 50px 0 100px 0;
+  padding: 50px 0 0 0;
+  position: relative;
 
   .heading {
     display: flex; flex-direction: column; align-items: center;
@@ -148,119 +222,73 @@ a {
       background: $color-dark;
     }
   }
-  .description {
-    max-width: 720px;
-    margin: 50px auto;
-    padding: 25px;
-    background: $color-dark;
-    border-radius: 25px;
-    text-align: center;
-    @media all and (max-width: $tablet) {
-      max-width: 400px;
-    }
-    p {
-      color: $color-light;
-      font-size: 24px;
-    }
-    a {
-      padding: 5px;
-      border: 2px solid $color-light;
-      color: $color-light;
-      
-    }
-  }
-  .tech-stack {
-    padding: 10px;
-    background: $color-accent-primary;
-    box-shadow: $shadow-main;
-    .heading {
-      margin-bottom: 25px;
-      h3 {
-        padding-left: 5px;
-        text-align: center;
-        font-size: 32px;
-        color: $color-dark;
-        border-left: 3px solid $color-dark;
-      }
-    }
-    .items {
-      text-align: center;
-      .item {
-        font-size: 48px;
-        color: $color-dark;
-        margin: 0 5px;
-        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        &:hover {
-          color: $color-light;
-        }
-      }
-    }
-  }
-}
-
-//PROJECTS
-.projects {
-  width: 100%;
-  background: $color-dark;
-  padding: 50px 0 150px 0;
-  position: relative;
-
-  .heading {
-    display: flex; flex-direction: column; align-items: center;
-    margin-bottom: 50px;
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 64px;
-      color: $color-light;
-    }
-    .line {
-      width: 100px; height: 5px;
-      text-align: center;
-      background: $color-light;
-    }
-  }
   .project-cards-container {
-    display: flex; justify-content: space-evenly; flex-wrap: wrap;
     .project-card {
-      width: 250px; height: 250px;
+      display: flex; justify-content: center;
+      padding: 75px 15px;
       position: relative; display: flex;
-      border: 2px solid $color-light;
-      margin: 10px;
-      .title {
-        width: 100%;
-        align-self: flex-end;
-        text-align: center;
-        font-size: 24px;
-        background: $color-light;
-        color: $color-dark;
-        line-height: 32px;
-      }
-      .overlay {
-        position: absolute;
-        width: 100%; height: calc(100% - 32px);
-        top: 0; left: 0;
-        background: rgba(0,0,0,.25);
-        display: flex; align-items: flex-end;
-        opacity: 0;
-        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        a {
-          width: 50%;
-          background: $color-accent-primary;
-          padding: 5px;
-          text-align: center;
-          font-size: 16px;
-          &:hover {
-            cursor: pointer;
-            transition: 0.25s linear;
-            background: black;
-            color: white;
+      background: $color-light;
+      box-shadow: $shadow-main;
+      .details {
+        display: flex; flex-wrap: wrap;
+        .image-one {
+          margin-right: 50px;
+        }
+        .image-two {
+          margin-left: 50px;
+        }
+        .image {
+          display: flex; justify-content: center; align-items: center;
+          img {
+            width: 300px; height: 300px;
+            border: 2px solid $color-dark;
+            object-fit: cover;
+            @media all and (max-width: $mobile) {
+              width: 100%;
+            }
+          }
+          @media all and (max-width: $mobile) {
+            margin: 0px;
+          }
+        }
+        .text {
+          width: 400px;
+          @media all and (max-width: $tablet) {
+            width: 300px;
+          }
+          h1 {
+            font-size: 28px;
+            color: $color-dark;
+            margin-bottom: 25px;
+          }
+          .icon {
+            font-size: 24px;
+          }
+          .stack {
+            color: darken($color: $color-accent-primary, $amount: 40)
+          }
+          p {
+            margin-bottom: 25px;
+            text-align: justify;
+          }
+          button {
+            margin-right: 15px;
+            background: $color-accent-primary;
+            padding: 5px;
+            border: none;
+            color: $color-dark;
+            font-size: 18px;
+            &:hover {
+              background: $color-dark;
+              color: $color-accent-primary;
+            }
           }
         }
       }
-      &:hover > .overlay {
-        opacity: 1;
-      }
+    }
+    .line {
+      width: 100%; height: 2px;
+      background: $color-accent-primary;
     }
   }
 }
