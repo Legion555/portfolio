@@ -4,10 +4,11 @@ import { DiMongodb } from 'react-icons/di';
 import { IoLogoNodejs } from 'react-icons/io';
 import FileSaver from 'file-saver';
 
-FileSaver.saveAs(
-    process.env.PUBLIC_URL + "/assets/joshuaLausbergResume.pdf",
-    "joshuaLausbergResume.pdf");
+// FileSaver.saveAs(
+//     process.env.PUBLIC_URL + "/assets/joshuaLausbergResume.pdf",
+//     "joshuaLausbergResume.pdf");
 
+    FileSaver.saveAs("https://legion555.github.io/portfolio/assets/joshuaLausbergResume.pdf", "joshuaLausbergResume.pdf");
 const About = () => {
     return (
         <div className="about" id="about">
@@ -25,6 +26,7 @@ const About = () => {
                 </p>
                 <br/><br/>
                 <a href="joshuaLausbergResume.pdf"><FaFileAlt /> My Resume</a>
+                
             </div>
             <div className="tech-stack">
                 <div className="heading">
