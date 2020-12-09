@@ -1,7 +1,12 @@
 import React from 'react';
 import { FaFileAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaGithub } from 'react-icons/fa';
-import { DiMongodb, DiReact } from 'react-icons/di';
+import { DiMongodb } from 'react-icons/di';
 import { IoLogoNodejs } from 'react-icons/io';
+import FileSaver from 'file-saver';
+
+FileSaver.saveAs(
+    process.env.PUBLIC_URL + "/assets/joshuaLausbergResume.pdf",
+    "joshuaLausbergResume.pdf");
 
 const About = () => {
     return (
@@ -19,7 +24,7 @@ const About = () => {
                 This is what I base my life on.
                 </p>
                 <br/><br/>
-                <a href="./assets/joshuaLausbergResume.pdf"><FaFileAlt /> My Resume</a>
+                <a href="joshuaLausbergResume.pdf"><FaFileAlt /> My Resume</a>
             </div>
             <div className="tech-stack">
                 <div className="heading">
