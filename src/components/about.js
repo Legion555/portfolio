@@ -24,7 +24,7 @@ const About = () => {
                 This is what I base my life on.
                 </p>
                 <br/><br/>
-                <a href="joshuaLausbergResume.pdf"><FaFileAlt /> My Resume</a>
+                <a href="./joshuaLausbergResume.pdf"><FaFileAlt /> My Resume</a>
             </div>
             <div className="tech-stack">
                 <div className="heading">
