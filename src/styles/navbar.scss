@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0; z-index: 10;
+    background: $color-dark;
+    .links {
+      display: flex;
+      justify-content: center;
+      a {
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        font-size: 32px;
+        color: rgba(255, 255, 225,.5);
+        padding: 10px 20px;
+        @media all and (max-width: $mobile) {
+          font-size: 24px;
+        }
+        &:hover {
+          color: $color-accent-primary;
+          cursor: pointer;
+        }
+      }
+    }
+  }

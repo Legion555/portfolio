@@ -1,0 +1,74 @@
+@import './variables.scss';
+
+.about {
+    width: 100%;
+    background: $color-accent-primary;
+    padding: 50px 0 50px 0;
+    box-shadow: $shadow-main;
+    .heading {
+      display: flex; flex-direction: column; align-items: center;
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 64px;
+        color: $color-dark;
+      }
+      .line {
+        width: 100px; height: 5px;
+        text-align: center;
+        background: $color-dark;
+      }
+    }
+    .description {
+      max-width: 720px;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+      @media all and (max-width: $tablet) {
+        max-width: 400px;
+      }
+      p {
+        color: $color-dark;
+        font-size: 24px;
+      }
+      a {
+        padding: 10px;
+        font-size: 24px;
+        background: $color-dark;
+        color: $color-accent-primary;
+        transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+        &:hover {
+          border: 2px solid $color-dark;
+          background: $color-accent-primary;
+          color: $color-dark;
+        }
+      }
+    }
+    .tech-stack {
+      max-width: 480px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 15px;
+      border-radius: 25px;
+      background: lighten($color: $color-dark, $amount: 5);
+      .heading {
+        margin-bottom: 25px;
+        h3 {
+          padding-left: 5px;
+          text-align: center;
+          font-size: 32px;
+          color: $color-light;
+          border-left: 3px solid $color-light;
+        }
+      }
+      .items {
+        text-align: center;
+        .item {
+          font-size: 48px;
+          color: $color-dark;
+          margin: 0 5px;
+          transition: 1s cubic-bezier(0.075, 0.75, 0.15, 1);
+        }
+      }
+    }
+  }

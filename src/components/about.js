@@ -1,14 +1,10 @@
 import React from 'react';
+import '../styles/about.scss';
+//Icons
 import { FaFileAlt, FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGitAlt, FaGithub } from 'react-icons/fa';
 import { DiMongodb } from 'react-icons/di';
 import { IoLogoNodejs } from 'react-icons/io';
-import FileSaver from 'file-saver';
 
-// FileSaver.saveAs(
-//     process.env.PUBLIC_URL + "/assets/joshuaLausbergResume.pdf",
-//     "joshuaLausbergResume.pdf");
-
-    // FileSaver.saveAs("https://legion555.github.io/portfolio/assets/joshuaLausbergResume.pdf", "joshuaLausbergResume.pdf");
 const About = () => {
     return (
         <div className="about" id="about">
@@ -25,8 +21,7 @@ const About = () => {
                 This is what I base my life on.
                 </p>
                 <br/><br/>
-                <a href={`${process.env.PUBLIC_URL}/assets/joshuaLausbergResume.pdf`} target='_blank'><FaFileAlt /> My Resume</a>
-                
+                <a href={`${process.env.PUBLIC_URL}/assets/joshuaLausbergResume.pdf`} target='_blank' rel="noreferrer"><FaFileAlt /> My Resume</a>
             </div>
             <div className="tech-stack">
                 <div className="heading">

@@ -1,0 +1,45 @@
+@import './variables.scss';
+
+.contact {
+    width: 100%;
+    background: $color-light;
+    padding: 50px 0 100px 0;
+  
+    .heading {
+      display: flex; flex-direction: column; align-items: center;
+      margin-bottom: 50px;
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 64px;
+        color: $color-dark;
+      }
+      .line {
+        width: 100px; height: 5px;
+        text-align: center;
+        background: $color-dark;
+      }
+    }
+    .links {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      .item {
+        margin: 0 25px;
+        &:hover svg {
+          color: $color-accent-primary;
+          background: $color-dark;
+        }
+        svg {
+          width: 150px; height: 150px;
+          padding: 40px;
+          text-align: center; line-height: 75px;
+          background: $color-accent-primary;
+          border-radius: 100%;
+          transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        p {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }

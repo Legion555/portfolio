@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/footer.scss';
 import { FaReact } from 'react-icons/fa';
 import { FaSass } from 'react-icons/fa';
 

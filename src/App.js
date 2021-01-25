@@ -1,5 +1,5 @@
-import React, { useState} from 'react';
-import './App.css';
+import React from 'react';
+import './styles/App.scss';
 import Hero from './components/hero';
 import Navbar from './components/navbar';
 import Projects from './components/projects';

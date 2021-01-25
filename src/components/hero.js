@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../styles/hero.scss';
 import { Link } from 'react-scroll';
 
 const Hero = () => {
